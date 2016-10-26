@@ -1,0 +1,89 @@
+body {
+	font-family: Verdana, Geneva, sans-serif;
+	background-color: #ccccff;
+}
+
+.nav {
+	text-align: center;
+}
+
+.nav a {
+	text-decoration: none;
+	color: #ffffff;
+	font-weight: bold;
+	padding-right: 10px;
+	padding-left: 10px;
+}
+
+
+/*In the h1 tag, find the first <span> child and make it hover*/
+.rainbow span:nth-child(7n+1):hover {
+	color: #F2671F;
+}
+.rainbow span:nth-child(7n+2):hover {
+	color: #C91B26;
+}
+.rainbow span:nth-child(7n+3):hover{
+	color: #9C0F5F;
+}
+.rainbow span:nth-child(7n+4):hover{
+	color: #60047A;
+}
+.rainbow span:nth-child(7n+5):hover{
+	color: #160A47;
+}
+.rainbow span:nth-child(7n+6):hover{
+	color: #FFE600;
+}
+.rainbow span:nth-child(7n+7):hover{
+	color: #E1D041;
+}
+
+.intro {
+	margin: 20px;
+	margin-bottom: 50px;
+}
+
+h1 {
+	font-size: 100px;
+}
+
+h1:first-child {
+	margin-bottom: -50px;
+}
+
+h1:nth-child(2) {
+	margin-bottom: -50px;
+}
+
+.quotes {
+	position: block;
+	width: 500px;
+	margin: auto;
+	font-size: 18px;
+}
+
+.quotes p {
+	padding: 10px;
+	margin-top: 50px;
+	margin-bottom: 50px;
+	border: 1px solid black;
+}
+
+#quote-easy:hover {
+	font-size: 0;
+}
+
+#quote-easy:hover:before {
+	content: attr(data-hover);
+	font-size: 18px;
+	font-weight: bold;
+}
+.footer {
+	background-color: #323299;
+	height: 100px;
+	width: 100%;
+}
+
+
+

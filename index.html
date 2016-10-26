@@ -1,0 +1,75 @@
+<html>
+	<head>
+		<title>Stephanie's Page</title>
+		<link rel="stylesheet" type="text/css" href="main.css">
+	</head>
+	<body>
+		<div id="background"></div>
+		<div class="nav">
+			<ul>
+				<a href="http://www.tasteofhome.com/recipes/course/dinner-recipes/top-10-mac-cheese-recipes">FOOD</a>
+				<a href="https://www.buzzfeed.com/kaelintully/i-volunteer-as-tribute-to-hug-all-of-these-puppies?utm_term=.ovX9K9D4J1#.cmqmXmgPEd">PUPPIES</a>
+				<a href="https://www.instagram.com/jerryoftheday/?hl=en">SKIING</a>
+				<a href="http://www.catan.com/">LOVES</a>
+			</ul>
+		</div>
+		<div class="intro">
+			<h1><span class="rainbow">GOOD JOB</span></h1>
+			<h1><span class="rainbow">STEPHANIE</span></h1>
+			<h1><span class="rainbow">(and EVERYONE)</span></h1>
+			<p>What in the world will she think of next?</p>
+		</div>
+		<div class="quotes">
+			<p id="quote-easy" data-hover="Besides Tacos">NOTHING worth having comes EASY</p>
+			<p>LIFE begins at the END of your comfort zone</p>
+			<p id ="quote-rock">A river CUTS through rock, not because of its power, but because of its PERSISTENCE</p>
+		</div>
+		<div class="footer">
+		</div>
+		<script type="text/javascript">
+
+		var array = [];
+		var pageGrab = function(){
+			 var element = document.getElementsByTagName("body")
+			 console.log(element)
+			 return elementGrab(element[0]) }
+
+		var elementGrab = function(element){
+    		if (element.children.length === 0){
+    			return element.innerText
+    		} else {
+    			var text = ''
+    			console.log(element.children.length)
+    			for (var i=0; i < element.children.length; i++){
+    				text += elementGrab(element.children[i])
+    			}
+    			return text
+    		}
+		}
+
+		</script>
+
+		<script type="text/javascript">
+		/*initiating variable element, using getElement to look up the id "rainbow"*/
+		var elements = document.getElementsByClassName("rainbow");
+		
+		for ( var m = 0; m < elements.length; m++) {
+			
+			/* element points to the variable elements */
+			var element = elements[m];
+			/* name is looking inside the html that is stored in elements */
+			var name = element.innerHTML;
+			console.log(name);
+			var placename = "";
+			for( var i = 0; i < name.length; i++ ) {
+				placename += "<span>" + name.charAt(i) + "</span>";
+			}
+
+			element.innerHTML = placename;
+			}
+
+		var quoteElement = document.getElementById("quote-rock").innerHTML;
+			console.log(quoteElement)
+		</script>
+	</body>
+</html>
